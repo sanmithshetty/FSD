@@ -2,11 +2,12 @@
 // StudyHive Frontend Configuration
 // =============================================
 const CONFIG = {
-  API_BASE: 'http://localhost:5000/api',
+  API_BASE: 'https://fsd-3md6.onrender.com/',
   // Change to your deployed backend URL in production
   // API_BASE: 'https://your-backend.railway.app/api',
+  
 };
-
+const API_URL = import.meta.env.VITE_API_URL;
 const SUBJECTS = [
   'All', 'Mathematics', 'Physics', 'Chemistry', 'Biology',
   'Computer Science', 'History', 'Geography', 'Economics',

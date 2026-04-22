@@ -4,20 +4,11 @@ const cors = require('cors');
 const connectDB = require('./config/db');
 
 const app = express();
-
 // Connect to MongoDB Atlas
 connectDB();
 
 // Middleware
-app.use(cors({
-  origin: [
-    process.env.FRONTEND_URL || 'http://127.0.0.1:5500',
-    'http://localhost:5500',
-    'http://localhost:3000',
-    'null' // for file:// protocol during dev
-  ],
-  credentials: true,
-}));
+app.use(cors({}));
 app.use(express.json({ limit: '10kb' }));
 app.use(express.urlencoded({ extended: true }));
 
